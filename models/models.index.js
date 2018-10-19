@@ -36,16 +36,19 @@ module.exports.addUser = (obj) => {
     let keys = Object.keys(obj);
     keys.forEach(key => user[key] = obj[key]);
     usersArr.push(user);
-    return {user: user, message: 'Users are updated'};
+    return {user: user, message: `User with id ${index} is added`};
 };
 
 module.exports.updateFields = (id, obj) => {
     let user = usersArr.find(user => user.id === +id);
     if (user) {
         let fields = Object.keys(obj);
-        fields.forEach(field => user[field] = obj[field]);
-        return {user: user, message: 'Fields are updated'}
-
+        if(fields.length === 0) {
+            return {user: user, message: 'There is no data to update'}
+        } else {
+            fields.forEach(field => user[field] = obj[field]);
+            return {user: user, message: 'Fields are updated'}
+        }
     } else {
         return 'There is no user with such id';
     }

@@ -4,7 +4,6 @@ module.exports.logger = (req, res, next) => {
         url: req.url,
         method: req.method
     };
-
-    console.log(message);
+    console.log('request logger', message);
     next();
 };
