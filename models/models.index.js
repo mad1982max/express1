@@ -30,17 +30,17 @@ module.exports.deleteUserById = (id) => {
 };
 
 module.exports.addUser = (obj) => {
-    let index = usersArr[usersArr.length - 1].id + 1;
-    let user = {};
+    const index = usersArr[usersArr.length - 1].id + 1;
+    const user = {};
     user.id = index;
-    let keys = Object.keys(obj);
+    const keys = Object.keys(obj);
     keys.forEach(key => user[key] = obj[key]);
     usersArr.push(user);
     return {user: user, message: `User with id ${index} is added`};
 };
 
 module.exports.updateFields = (id, obj) => {
-    let user = usersArr.find(user => user.id === +id);
+    const user = usersArr.find(user => user.id === +id);
     if (user) {
         let fields = Object.keys(obj);
         if(fields.length === 0) {
@@ -55,9 +55,9 @@ module.exports.updateFields = (id, obj) => {
 };
 
 module.exports.updateAllFields = (id, obj) => {
-    let user = usersArr.find(user => user.id === +id);
+    const user = usersArr.find(user => user.id === +id);
     if (user) {
-        let fields = Object.keys(obj);
+        const fields = Object.keys(obj);
         fields.forEach(field => user[field] = obj[field]);
         return {user: user, message: 'User is updated'}
 

@@ -1,0 +1,42 @@
+[
+  {
+    "title": "ball",
+    "price": "59",
+    "status": "SOLD"
+  },
+  {
+    "title": "table",
+    "price": "151",
+    "status": "FREE"
+  },
+  {
+    "title": "spoon",
+    "price": "252",
+    "status": "SOLD"
+  },
+  {
+    "title": "glass",
+    "price": "930",
+    "status": "FREE"
+  },
+  {
+    "title": "pan",
+    "price": "35",
+    "status": "FREE"
+  },
+  {
+    "title": "plate",
+    "price": "75",
+    "status": "FREE"
+  },
+  {
+    "title": "basket",
+    "price": "985",
+    "status": "SOLD"
+  },
+  {
+    "title": "bucket",
+    "price": "651",
+    "status": "SOLD"
+  }
+]
